@@ -2,32 +2,35 @@
     <div class="row">
         <div class="col">
             <input type="text" class="form-control" id="nome" placeholder="Nome">
-        </div><br />
+        </div> <br />
         <div class="col">
-            <input type="tel" class="form-control" id="telefone" placeholder="Telefone">
+            <input type="tel" class="form-control" id="tel" placeholder="Telefone">
+        </div><br />
+    </div><br />
+    <div class="col">
+        <input type="text" class="form-control" id="metragem" placeholder="Metragem">
+    </div><br />
+    <div class="col">
+        <input type="text" class="form-control" id="local" placeholder="Local">
+    </div><br />
+    <div class="col">
+        <button id="submit" type="submit" class="btn btn-primary">Cotar</button>
+ 
         </div>
-    </div><br />
-    <div class="col">
-        <input type="tel" class="form-control" id="Metragem" placeholder="Metragem">
-    </div><br />
-    <div class="col">
-        <input type="text" class="form-control" id="Local" placeholder="Local">
-    </div><br />
-        <button id="submit" type="submit" class="btn btn-primary">enviar</button>
 </form>
 <script>
 
-    /*enviar whats app*/
+    /enviar whats app/
 
     document.querySelector('#submit').addEventListener('click', function () {
         let cliente = document.querySelector('#nome').value;
-        let sobrenome = document.querySelector('#sobrenome').value;
-        let email = document.querySelector('#email').value;
-        let telefone = document.querySelector('#telefone').value;
-        let exampleFormControlSelect1 = document.querySelector('#exampleFormControlSelect1').value;
+        let sobrenome = document.querySelector('#tel').value;
+        let email = document.querySelector('#metragem').value;
+        let telefone = document.querySelector('#local').value;
+        // let exampleFormControlSelect1 = document.querySelector('#exampleFormControlSelect1').value;
 
-        let url = "https://api.whatsapp.com/send?phone=5511998522382&text= Bem vindo a Corretora Sousa -->> %0A Qual é o seu nome? %0A " + cliente + " %0A Qual o seu sobrenome ?%0A" +
-            sobrenome + "%0A Qual o seu e-mail %0A " + email + " %0A Qual é o seu telefone ? %0A " + telefone + " %0A Uma cotação para quantas vidas ? %0A" + exampleFormControlSelect1;
+        let url = "https://api.whatsapp.com/send?phone=5511998522382&text= ola %0A ____Nome____ %0A " + cliente + " %0A ____Telefone____ ?%0A" +
+            sobrenome + "%0A ____Metragem____ %0A " + email + " %0A ____Local____ %0A " + telefone ;
 
         window.open(url);
 
